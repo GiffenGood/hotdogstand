@@ -1,5 +1,11 @@
 <nav mat-tab-nav-bar>
-  <a mat-tab-link [routerLink]="['hotdogs']">Hot Dogs</a>
-  <a mat-tab-link [routerLink]="['condiments']">Condiments</a>
+  <a mat-tab-link [routerLink]="['hotdogs']" routerLinkActive #rla1="routerLinkActive" [active]="rla1.isActive">
+    Hot Dogs
+  </a>
+  <a mat-tab-link [routerLink]="['condiments']" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+    Condiments
+  </a>
 </nav>
-<router-outlet ></router-outlet>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>

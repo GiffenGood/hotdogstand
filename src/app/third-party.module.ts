@@ -6,6 +6,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -15,7 +18,10 @@ import { CommonModule } from '@angular/common';
     MatIconModule,
     MatMenuModule,
     FlexLayoutModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatCardModule
   ],
   exports: [
     MatToolbarModule,
@@ -23,7 +29,10 @@ import { CommonModule } from '@angular/common';
     FlexLayoutModule,
     MatMenuModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatCardModule
   ],
   declarations: []
 })
