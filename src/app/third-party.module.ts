@@ -2,7 +2,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,14 +14,16 @@ import { CommonModule } from '@angular/common';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTabsModule
   ],
-  exports :[
+  exports: [
     MatToolbarModule,
     MatIconModule,
     FlexLayoutModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   declarations: []
 })

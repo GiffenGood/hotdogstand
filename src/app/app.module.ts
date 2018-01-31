@@ -1,3 +1,5 @@
+import { HomeComponent } from './home.component';
+import { StoreModule } from './store/store.module';
 import { MatButtonModule } from '@angular/material/button';
 import { ThirdPartyModule } from './third-party.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,12 +10,14 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ThirdPartyModule,
+    StoreModule,
     AppRoutingModule
   ],
   providers: [],
