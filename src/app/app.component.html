@@ -1,37 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <div>
-      <span routerLink="home">Hot Dog Stand</span>
-    </div>
-    <div fxFlex></div>
-    <div>
-      <button mat-icon-button [routerLink]="['/store']">
-        <mat-icon class="example-icon">favorite</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon class="example-icon">delete</mat-icon>
-      </button>
-      <button mat-mini-fab [matMenuTriggerFor]="menu" color="accent">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voicemail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-      </mat-menu>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
-<div class="main">
-  <router-outlet></router-outlet>
+<div class="container" fxLayout="column">
+  <div fxFlex="0 0 auto">
+    <mjb-toolbar></mjb-toolbar>
+  </div>
+  <div class="main" fxFlex>
+    <router-outlet></router-outlet>
+  </div>
+  <div fxFlex="0 0 auto">
+    Footer
+  </div>
 </div>
