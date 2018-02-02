@@ -7,6 +7,7 @@ import { StoreMainComponent } from './store-main/store-main.component';
 import { HotdogsComponent } from './hotdogs/hotdogs.component';
 import { CondimentsComponent } from './condiments/condiments.component';
 import { HotdogComponent } from './hotdog/hotdog.component';
+import { HotdogService } from './hotdog.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,14 @@ import { HotdogComponent } from './hotdog/hotdog.component';
     StoreRoutingModule,
     ThirdPartyModule
   ],
-  declarations: [StoreMainComponent, HotdogsComponent, CondimentsComponent, HotdogComponent]
+  declarations: [
+    StoreMainComponent,
+    HotdogsComponent,
+    CondimentsComponent,
+    HotdogComponent
+  ],
+  providers: [
+    HotdogService
+  ]
 })
 export class StoreModule { }
