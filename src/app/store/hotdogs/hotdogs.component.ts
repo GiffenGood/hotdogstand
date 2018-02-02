@@ -1,5 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router, ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'mjb-hotdogs',
@@ -11,7 +13,7 @@ export class HotdogsComponent implements OnInit {
   hotdogs: any = [];
   displayedColumns = ['name', 'description', 'image'];
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
   }
 
   applyFilter(filterValue: string) {
@@ -22,6 +24,7 @@ export class HotdogsComponent implements OnInit {
 
   ngOnInit() {
     this.hotdogs = new MatTableDataSource(dogs);
+    console.log(this.route.snapshot.data['title']);
   }
 }
 
