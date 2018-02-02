@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { slideInDownAnimation } from '../../slideInDownAnimation';
 
 @Component({
   selector: 'mjb-hotdogs',

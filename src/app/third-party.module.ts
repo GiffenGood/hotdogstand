@@ -7,8 +7,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatCardModule} from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   imports: [
@@ -21,7 +23,8 @@ import {MatCardModule} from '@angular/material/card';
     MatTabsModule,
     MatTableModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
@@ -32,7 +35,8 @@ import {MatCardModule} from '@angular/material/card';
     MatTabsModule,
     MatTableModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   declarations: []
 })
