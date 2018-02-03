@@ -11,7 +11,7 @@ import { HotdogService } from '../hotdog.service';
 })
 
 export class HotdogsComponent implements OnInit {
-  hotdogs: any = [];
+  hotdogs: any = new MatTableDataSource();
   displayedColumns = ['name', 'description', 'image'];
 
   constructor(private route: ActivatedRoute, private hotdogService: HotdogService) {
@@ -24,10 +24,7 @@ export class HotdogsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.hotdogService.getAll().subscribe((d: any[]) => {
-      this.hotdogs = new MatTableDataSource(d);
-      console.log(this.route.snapshot.data['title']);
-    });
+    this.hotdogs = new MatTableDataSource(this.route.snapshot.data['hotdogs']);
   }
 }
 
