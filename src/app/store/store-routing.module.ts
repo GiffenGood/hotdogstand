@@ -9,21 +9,31 @@ import { HotdogsResolver } from './hotdogs/hotdogs-resolver';
 const routes: Routes = [
   {
     path: 'store', component: StoreMainComponent, children:
-      [
-        { path: '', redirectTo: 'hotdogs', pathMatch: 'full' },
-        {
-          path: 'hotdogs',
-          component: HotdogsComponent,
-          resolve: {
-            hotdogs: HotdogsResolver
-          },
-          data: { title: 'Kosher Baby!' },
-          children: [
-            { path: ':id', component: HotdogComponent }
-          ]
+    [
+      {
+        path: '',
+        redirectTo: 'hotdogs',
+        pathMatch: 'full'
+      },
+      {
+        path: 'hotdogs',
+        component: HotdogsComponent,
+        resolve: {
+          hotdogs: HotdogsResolver
         },
-        { path: 'condiments', component: CondimentsComponent }
-      ]
+        data: { title: 'Kosher Baby!' },
+        children: [
+          {
+            path: ':id',
+            component: HotdogComponent
+          }
+        ]
+      },
+      {
+        path: 'condiments',
+        component: CondimentsComponent
+      }
+    ]
   }
 ];
 

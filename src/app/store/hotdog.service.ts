@@ -12,7 +12,7 @@ export class HotdogService {
   }
 
   getAll() {
-    return Observable.of(dogs).delay(2000);
+    return Observable.of(dogs);
   }
 }
 
