@@ -1,12 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <div>
-      <span routerLink="home">Hot Dog Stand</span> 
+      <span routerLink="home">Hot Dog Stand</span>
     </div>
     <div fxFlex></div>
     <div>
       <button mat-icon-button [routerLink]="['/store']">
         <mat-icon class="example-icon">favorite</mat-icon>
+      </button>
+      <button mat-icon-button [routerLink]="[{ outlets: { sidebar: ['msgs'] } }]">
+        <mat-icon class="example-icon">email</mat-icon>
       </button>
       <button mat-icon-button>
         <mat-icon class="example-icon">delete</mat-icon>
