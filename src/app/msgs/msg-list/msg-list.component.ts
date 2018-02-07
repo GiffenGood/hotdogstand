@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MsgService } from '../msg.service';
 
 @Component({
   selector: 'mjb-msg-list',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MsgListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private msgService: MsgService) { }
 
   ngOnInit() {
+    this.msgService.addMessage('A test message!');
   }
 
 }

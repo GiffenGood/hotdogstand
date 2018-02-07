@@ -2,15 +2,13 @@
   <div class="toolbar">
     <mjb-toolbar></mjb-toolbar>
   </div>
-  <div class="main" fxFlex>
-    <div fxFlexLayout>
-      <div fxFlex="85%">
+  <div class="main" fxFlex fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex>
         <router-outlet></router-outlet>
       </div>
-      <div fxFlex="15%">
+      <div fxFlex="15%" class="sidebarcontainer" *ngIf="msgService.isShowing">
           <router-outlet name="sidebar"></router-outlet>
       </div>
-    </div>
   </div>
   <div class="footer" fxFlex="0 0 auto">
     Footer

@@ -6,7 +6,12 @@
     padding-left: 15px;
     padding-right: 15px;
     background-color: gainsboro;
-    overflow-y: auto
+    overflow-y: auto;
+}
+
+.sidebarcontainer{
+    background-color: ivory;
+    border-left: darkgray 1px solid;
 }
 
 .footer{
