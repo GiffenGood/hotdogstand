@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MsgService } from './msgs/msg.service';
 
 @Component({
   selector: 'mjb-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mjb';
+
+  constructor(private msgService: MsgService) {
+
+  }
+
 }

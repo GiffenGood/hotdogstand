@@ -1,9 +1,14 @@
 <div class="container" fxLayout="column">
-  <div class="toolbar" >
+  <div class="toolbar">
     <mjb-toolbar></mjb-toolbar>
   </div>
-  <div class="main" fxFlex>
-    <router-outlet></router-outlet>
+  <div class="main" fxFlex fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex>
+        <router-outlet></router-outlet>
+      </div>
+      <div fxFlex="15%" class="sidebarcontainer" *ngIf="msgService.isShowing">
+          <router-outlet name="sidebar"></router-outlet>
+      </div>
   </div>
   <div class="footer" fxFlex="0 0 auto">
     Footer

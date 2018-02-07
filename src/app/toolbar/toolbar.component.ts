@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MsgService } from '../msgs/msg.service';
 
 @Component({
   selector: 'mjb-toolbar',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private msgService: MsgService) { }
+
+  showMessages() {
+    this.msgService.isShowing = true;
+    this.msgService.addMessage('Yo another message');
+    this.router.navigate([{ outlets: { sidebar: ['msgs'] } }]);
+  }
 
   ngOnInit() {
   }
